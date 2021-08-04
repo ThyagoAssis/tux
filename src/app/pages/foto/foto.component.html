@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 80px;">
+    <h2 style="color:#4b6584;">{{ titlePage }}</h2>
+    <hr style="width: 100%;">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let foto of albumFoto">
+            <div class="card card_foto" style="width: 18rem;">
+                <img [src]="foto.endereco" class="card-img-top" alt="imagem" width="286" height="180">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">{{ foto.titulo }}</h5>
+                    <hr>
+                    <p class="card-text">{{ foto.descricao }}</p>
+                    <p class="card-title" style="font-style: italic; font-size: 15px; text-align: right;">{{ foto.autor }}</p>                                      
+                    <a [href]="foto.endereco" class="btn buttonVisitar">Visitar</a>
+                    <button (click)="deletar(foto.id)" class="btn buttonVisitar" style="margin-top: 10px; background-color:#e17055; color: #fff;">Excluir</button>
+                    <button class="btn btn-light buttonVisitar" style="margin-top: 10px; background-color: #16a085; color: #fff;" [routerLink]="['/update',foto.id]">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

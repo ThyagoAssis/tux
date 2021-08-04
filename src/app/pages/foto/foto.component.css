@@ -1,0 +1,10 @@
+.buttonVisitar {
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #84817a;   
+    background-color: #f7f1e3;
+    border-radius: 6px;
+    color: #4b6584;
+    font-weight: bold;
+}

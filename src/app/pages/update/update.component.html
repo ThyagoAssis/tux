@@ -1,0 +1,49 @@
+<section>
+    <div class="container formulario">
+        <!-- Início Titulo -->
+        <h2>{{ titlePage }}</h2>
+        <hr>
+        <!-- Fim do título -->
+
+        <!-- Início Messagem Alerta -->
+        <div class="alert alert-success" role="alert" *ngIf="alerta">
+           Dados Atualizados com sucesso!
+        </div>
+        <!-- Fim Messagem Alerta -->
+
+        <!-- Início Fomulário -->
+        <form #form="ngForm" (submit)="update(form)">
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label class="form-label"><strong>Título:</strong></label>
+                    <input type="text" class="form-control" style="border: 0;" placeholder="Título da foto"
+                        name="titulo" [ngModel]="foto.titulo" autofocus>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label class="form-label"><strong>Autor:</strong></label>
+                    <input type="text" class="form-control" placeholder="Nome autor" name="autor"
+                        [ngModel]="foto.autor">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"><strong>Edereço da Imagem(url):</strong></label>
+                <input type="text" class="form-control" placeholder="http://exemplo.com/foto.png" name="endereco"
+                    [ngModel]="foto.endereco">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><strong>Descição:</strong></label>
+                <textarea maxlength="100" type="text" class="form-control" placeholder="Descrição da imagem"
+                    name="descricao" [ngModel]="foto.descricao"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-dark" style="background-color: #4b6584;">Editar</button>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </form>
+    </div>
+
+</section>

@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.card_foto {
+    background-color: #fff;
+    color: #2c3e50;
+    text-align: justify;
+    margin: 20px;    
+    border: 2px solid #84817a;
+    box-shadow: 0 0 1em;
+    border-radius: 30px;
+    
+}
+.active {
+    background-color: transparent;
+}
+
+.formulario {
+    text-align: center; 
+    color:#4b6584;
+    margin-top: 150px;
+}
+
+.formulario button {
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #4b6584; 
+    margin-top: 20px;
+}
